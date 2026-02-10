@@ -35,10 +35,10 @@ document.addEventListener("DOMContentLoaded", function() {
         searchButton.textContent= "searching...";
         searchButton.disabled = true;
         //    const targetUrl = 'https://leetcode.com/graphql/';
-        // const proxyUrl = `https://corsproxy.io/?${encodeURIComponent('https://leetcode.com/graphql')}`;
+        const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent('https://leetcode.com/graphql')}`;
             
-            const targetUrl = 'https://leetcode.com/graphql';
-    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    //         const targetUrl = 'https://leetcode.com/graphql';
+    // const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
             const myHeaders = new Headers();
             myHeaders.append("content-type", "application/json");
 
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         
         
-        const response = await  fetch(proxyUrl +targetUrl, requestOptions);
+        const response = await  fetch(proxyUrl, requestOptions);
         if(!response.ok)
         {
             throw new Error("Unable to fetch the user datails");
@@ -146,3 +146,4 @@ searchButton.addEventListener('click', function()
 });
 
 });
+

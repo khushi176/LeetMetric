@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         searchButton.textContent= "searching...";
         searchButton.disabled = true;
-
-        const proxyUrl = 'https://corsproxy.io/?'; 
-            const targetUrl = 'https://leetcode.com/graphql/';
+           const targetUrl = 'https://leetcode.com/graphql/';
+        const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`; 
+            
             
             const myHeaders = new Headers();
             myHeaders.append("content-type", "application/json");
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         
         
-        const response = await  fetch(proxyUrl+encodeURIComponent(targetUrl), requestOptions);
+        const response = await  fetch(proxyUrl, requestOptions);
         if(!response.ok)
         {
             throw new Error("Unable to fetch the user datails");

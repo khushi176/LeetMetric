@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         
         
-        const response = await  fetch(proxyUrl, requestOptions);
+        const response = await  fetch(proxyUrl , requestOptions);
         if(!response.ok)
         {
             throw new Error("Unable to fetch the user datails");
@@ -146,4 +146,5 @@ searchButton.addEventListener('click', function()
 });
 
 });
+
 

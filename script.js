@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         searchButton.textContent= "searching...";
         searchButton.disabled = true;
-           const targetUrl = 'https://leetcode.com/graphql/';
-        const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`; 
+           // const targetUrl = 'https://leetcode.com/graphql/';
+        const proxyUrl = `https://corsproxy.io/?${encodeURIComponent('https://leetcode.com/graphql')}`; 
             
             
             const myHeaders = new Headers();
@@ -145,3 +145,4 @@ searchButton.addEventListener('click', function()
 });
 
 });
+
